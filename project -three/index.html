@@ -15,17 +15,17 @@
             <h2>Your Basic Info</h2>
             <br>
             <p>Name:</p>
-            <input type="text" id="name" class="custom-input" placeholder="Enter Your Name"><br><br>
+            <input type="text" id="name" class="custom-input" placeholder="Enter Your Name" required><br><br>
             <p>Email:</p>
             <input type="email" id="email" class="custom-input" placeholder="Enter Your Email"
-                autocomplete="current-password"><br><br>
+                autocomplete="current-password" required><br><br>
             <p>Password:</p>
             <input type="password" id="password" class="custom-input" placeholder="Enter Your Password"
-                autocomplete="current-password" ><br><br>
+                autocomplete="current-password" required><br><br>
             <p>Age:</p>
-              <input type="radio" id="underAge" name="age" value="Under 18">
+              <input type="radio" id="underAge" name="age" value="Under 18" required>
               <label for="html">Under 18</label><br>
-              <input type="radio" id="overAge" name="age" value="Over 18">
+              <input type="radio" id="overAge" name="age" value="Over 18" required>
               <label for="css">Over 18</label><br>
             <h2> Your Proflie:</h2>
             <p>Bio</p>
@@ -38,11 +38,17 @@
                 <option>Software Developer</option>
             </select>
             <p>Intrest:</p>
-            <input id="hobby1" type="checkbox"> <span>Development</span>
+            <label>
+                <input id="hobby1" type="checkbox" name="interests" value="Development">Development
+            </label>
             <br>
-            <input id="hobby2" type="checkbox"> <span>Design</span>
+            <label>
+                <input id="hobby2" type="checkbox" name="interests" value="Design">Design
+            </label>
             <br>
-            <input id="hobby3" type="checkbox"> <span>Bussines</span>
+            <label>
+                <input id="hobby3" type="checkbox" name="interests" value="Bussines">Bussines
+            </label>
             <br>
             <button type="submit">Sign Up</button>
         </div>

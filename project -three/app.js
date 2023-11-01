@@ -23,7 +23,7 @@ const passwordInput = document.getElementById('password');
 const bioInput = document.getElementById('bio');
 const optionsInput = document.getElementById('options');
 const ageInput = document.querySelectorAll('input[name="age"]');
-
+const interestsInputs = document.querySelectorAll('input[name="interests"]');
 
 dataForm.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -34,8 +34,11 @@ dataForm.addEventListener('submit', (e) => {
     const bio = bioInput.value;
     const options = optionsInput.value;
     const age = Array.from(ageInput).find(input => input.checked)?.value;
+    const interests = [...interestsInputs]
+        .filter(input => input.checked)
+        .map(input => input.value);
 
-    if (name.value !== '' && email.value !== '' && password.value !== '' && bio.value !== '' && options.value !== '' && age) {
+    if (name.value !== '' && email.value !== '' && password.value !== '' && bio.value !== '' && options.value !== '' && age && interests.length > 0) {
         // Push the data to the database
         const newDataRef = database.ref('userdata').push();
         newDataRef.set({
@@ -44,7 +47,8 @@ dataForm.addEventListener('submit', (e) => {
             password: password,
             Age: age,
             bio: bio,
-            job_role: options
+            job_role: options,
+            Interests: interests
         });
         
         
@@ -54,5 +58,6 @@ dataForm.addEventListener('submit', (e) => {
         bioInput.value = '';
         optionsInput.value = '';
         ageInput[0].checked = '';
+        interestsInputs.forEach(input => (input.checked = false));
     }
 });
