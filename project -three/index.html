@@ -23,10 +23,10 @@
             <input type="password" id="password" class="custom-input" placeholder="Enter Your Password"
                 autocomplete="current-password" required><br><br>
             <p>Age:</p>
-              <input type="radio" id="underAge" name="age" value="Under 18" required>
-              <label for="html">Under 18</label><br>
-              <input type="radio" id="overAge" name="age" value="Over 18" required>
-              <label for="css">Over 18</label><br>
+              <input type="radio" name="age" value="Under 18" required>
+              <label>Under 18</label><br>
+              <input type="radio" name="age" value="Over 18" required>
+              <label>Over 18</label><br>
             <h2> Your Proflie:</h2>
             <p>Bio</p>
             <textarea id="bio" cols="41" rows="3"></textarea>
@@ -39,24 +39,20 @@
             </select>
             <p>Intrest:</p>
             <label>
-                <input id="hobby1" type="checkbox" name="interests" value="Development">Development
+                <input type="checkbox" name="interests" value="Development">Development
             </label>
             <br>
             <label>
-                <input id="hobby2" type="checkbox" name="interests" value="Design">Design
+                <input type="checkbox" name="interests" value="Design">Design
             </label>
             <br>
             <label>
-                <input id="hobby3" type="checkbox" name="interests" value="Bussines">Bussines
+                <input type="checkbox" name="interests" value="Bussines">Bussines
             </label>
             <br>
             <button type="submit">Sign Up</button>
         </div>
     </form>
-
-    <!-- <div>
-            <p id="pera"></p>
-        </div> -->
 
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
