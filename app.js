@@ -16,8 +16,8 @@ firebase.initializeApp(firebaseConfig);
 // Reference to the Firebase Realtime Database
 const database = firebase.database();
 
-const dataForm = document.getElementById("data-form");
-const nameInput = document.getElementById("name");
+const dataForm = document.getElementById("data-form";
+const nameInput = document.getElementById("name";
 const emailInput = document.getElementById("email");
 const passwordInput = document.getElementById("password");
 const bioInput = document.getElementById("bio");
@@ -62,12 +62,12 @@ dataForm.addEventListener("submit", (e) => {
     interestsInputs.forEach((input) => (input.checked = ""));
   }
 });
-// Listen for new messages in the database
-// database.ref("userdata").on("child_added", (snapshot) => {
-//   const messageData = snapshot.val();
-//   const messageKey = snapshot.key;
+Listen for new messages in the database
+database.ref("userdata").on("child_added", (snapshot) => {
+  const messageData = snapshot.val();
+  const messageKey = snapshot.key;
 
-//   const listItem = document.createElement("li");
-//   listItem.innerText = messageData.text;
-//   messageList.appendChild(listItem);
-// });
+  const listItem = document.createElement("li");
+  listItem.innerText = messageData.text;
+  messageList.appendChild(listItem);
+});
