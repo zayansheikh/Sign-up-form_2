@@ -53,6 +53,50 @@
             <button type="submit">Sign Up</button>
         </div>
     </form>
+    <form id="data-form">
+        <div class="container">
+            <h1 id="heading">Sign Up</h1>
+            <h2>Your Basic Info</h2>
+            <br>
+            <p>Name:</p>
+            <input type="text" id="name" class="custom-input" placeholder="Enter Your Name" required><br><br>
+            <p>Email:</p>
+            <input type="email" id="email" class="custom-input" placeholder="Enter Your Email"
+                autocomplete="current-password" required><br><br>
+            <p>Password:</p>
+            <input type="password" id="password" class="custom-input" placeholder="Enter Your Password"
+                autocomplete="current-password" required><br><br>
+            <p>Age:</p>
+              <input type="radio" name="age" value="Under 18" required>
+              <label>Under 18</label><br>
+              <input type="radio" name="age" value="Over 18" required>
+              <label>Over 18</label><br>
+            <h2> Your Proflie:</h2>
+            <p>Bio</p>
+            <textarea id="bio" cols="41" rows="3"></textarea>
+            <p>Job Role:</p>
+            <select id="options">
+                <option>Forent-End Developer</option>
+                <option>Back-End Developer</option>
+                <option>Graphic Designer</option>
+                <option>Software Developer</option>
+            </select>
+            <p>Intrest:</p>
+            <label>
+                <input type="checkbox" name="interests" value="Development">Development
+            </label>
+            <br>
+            <label>
+                <input type="checkbox" name="interests" value="Design">Design
+            </label>
+            <br>
+            <label>
+                <input type="checkbox" name="interests" value="Bussines">Bussines
+            </label>
+            <br>
+            <button type="submit">Sign Up</button>
+        </div>
+    </form>
     <!-- <ul id="message-list"></ul> -->
 
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
