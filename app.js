@@ -39,10 +39,10 @@ dataForm.addEventListener("submit", (e) => {
     .filter((input) => input.checked)
     .map((input) => input.value);
 
-  if (name.value !== "" && email.value !== "" && password.value !== "" && bio.value !== "" && options.value !== "" && age && interests.length > 0
+  if (name.value !== "" && email.value !== "" && password.value !== "" && bio.value !== "" && options.value !== "" && age
   ) {
     // Push the data to the database
-    const newDataRef = database.ref("userdata").push();
+    const newDataRef = database.ref("userdata:" + nameInput.value).push();
     newDataRef.set({
       user_name: name,
       email: email,
